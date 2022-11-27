@@ -7,8 +7,38 @@
   <title>First</title>
 </head>
 <body>
+  <div id="hero">I'm a hero</div>
+  <div class="hello-there">Hello there</div>
+
+  <div id="get-me">Hello</div>
+  <button id="btn">Click me</button>
+
   <script>
+    const hero = document.querySelector('#hero');
+    const p = document.createElement('p');
     
+    p.style.color = 'blue';
+    p.style.cssText = 'background-color: red; font-size: 12px; ';
+    p.setAttribute('style', 'font-weight: bold; ');
+    /*
+    parentNode.appendChild(childNode);
+    parentNode.insertBefore(newNode, referenceNode) ;
+    parentNode.removeChild(child);
+    */
+    const helloThere = document.querySelector('.hello-there').style;
+    helloThere.backgroundColor = 'red';
+    helloThere.color = 'white';
+    helloThere.fontWeight = 'bold';
+
+    const getMe = document.querySelector('#get-me');
+    getMe.style.backgroundColor = 'black';
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+      getMe.setAttribute('id', 'theDiv');
+      getMe.style.backgroundColor = 'blue';
+    })
+
+
   </script>
 </body>
 </html>
